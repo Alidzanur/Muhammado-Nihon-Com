@@ -106,9 +106,10 @@ export function AccordionContent({ children, className = '' }) {
     }
   }, [children, open]);
 
+  // Style logic: saat membuka pertama kali (height masih 0) mulai dari 0 agar animasi terlihat.
   const style = reducedMotion
     ? { height: open ? 'auto' : 0 }
-    : { height: open ? (height ? height : 'auto') : height, transition: 'height 300ms cubic-bezier(.4,0,.2,1), opacity 300ms' };
+    : { height: open ? (height ? height : 0) : 0, transition: 'height 300ms cubic-bezier(.4,0,.2,1), opacity 300ms' };
 
   return (
     <div
