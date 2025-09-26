@@ -10,6 +10,7 @@ import FAQ from './FAQ';
 import FinalCTA from './FinalCTA';
 import FooterLanding from './FooterLanding';
 import { ScrollProgressBar } from '../animations/ScrollProgressBar.jsx';
+import FloatingWhatsApp from './FloatingWhatsApp.jsx';
 
 export default function LandingPageMNI() {
   return (
@@ -25,6 +26,7 @@ export default function LandingPageMNI() {
       <FAQ />
       <FinalCTA />
       <FooterLanding />
+      <FloatingWhatsApp />
     </div>
   );
 }
