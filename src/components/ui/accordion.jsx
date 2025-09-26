@@ -38,7 +38,8 @@ export function AccordionTrigger({ children, className = '', ...props }) {
       aria-controls={contentId}
       onClick={toggle}
       className={clsx(
-        'w-full text-left px-4 py-3 font-medium flex items-center justify-between gap-2 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#BC002D]/40 transition',
+        'w-full text-left px-4 py-3 font-medium flex items-center justify-between gap-2 focus:outline-none transition select-none',
+        open ? 'bg-slate-50' : 'bg-white',
         className
       )}
       {...props}
