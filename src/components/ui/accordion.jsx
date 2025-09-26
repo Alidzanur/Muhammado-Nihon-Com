@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, createContext, useContext, useRef, useEffect } from 'react';
 import clsx from 'clsx';
 
 /*
@@ -55,20 +55,77 @@ export function AccordionContent({ children, className = '' }) {
   if (!ctx) return null;
   const { open, value } = ctx;
   const contentId = value ? `accordion-content-${value}` : undefined;
+  const wrapperRef = useRef(null);
+  const innerRef = useRef(null);
+  const [height, setHeight] = useState(0);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      setReducedMotion(mq.matches);
+      const handler = e => setReducedMotion(e.matches);
+      mq.addEventListener?.('change', handler);
+      return () => mq.removeEventListener?.('change', handler);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!wrapperRef.current || !innerRef.current) return;
+    if (open) {
+      const h = innerRef.current.scrollHeight;
+      requestAnimationFrame(() => setHeight(h));
+    } else {
+      setHeight(0);
+    }
+  }, [open, children]);
+
+  // Setelah animasi selesai & open, set height auto supaya jika isi berubah tidak patah
+  useEffect(() => {
+    if (!open) return; // only when opened
+    const el = wrapperRef.current;
+    if (!el) return;
+    const onEnd = (e) => {
+      if (e.propertyName === 'height' && open) {
+        el.style.height = 'auto';
+      }
+    };
+    el.addEventListener('transitionend', onEnd);
+    return () => el.removeEventListener('transitionend', onEnd);
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    if (wrapperRef.current && wrapperRef.current.style.height === 'auto') {
+      // force re-measure if children change while open
+      const h = innerRef.current?.scrollHeight || 0;
+      wrapperRef.current.style.height = h + 'px';
+      requestAnimationFrame(() => {
+        wrapperRef.current && (wrapperRef.current.style.height = 'auto');
+      });
+    }
+  }, [children, open]);
+
+  const style = reducedMotion
+    ? { height: open ? 'auto' : 0 }
+    : { height: open ? (height ? height : 'auto') : height, transition: 'height 300ms cubic-bezier(.4,0,.2,1), opacity 300ms' };
+
   return (
     <div
       id={contentId}
       role="region"
       aria-hidden={!open}
-      className={clsx(
-        'px-4 pb-4 -mt-2 text-sm text-slate-600 transition-all duration-300',
-        open ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden',
-        className
-      )}
+      className={clsx('px-0 text-sm text-slate-600', className)}
     >
-      {open && (
-        <div className="pt-1">{children}</div>
-      )}
+      <div
+        ref={wrapperRef}
+        style={style}
+        className={clsx('overflow-hidden px-4', open ? 'opacity-100' : 'opacity-0', reducedMotion ? '' : 'will-change-height')}
+      >
+        <div ref={innerRef} className="pt-1 pb-4">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
