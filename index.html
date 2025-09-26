@@ -9,8 +9,11 @@
     <meta name="author" content="PT Muhammad Nihon Istiqomah" />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#BC002D" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="canonical" href="https://www.ptmni.co.id/" />
     <link rel="alternate" hreflang="id-ID" href="https://www.ptmni.co.id/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ptmni.co.id/" />
 
     <!-- Open Graph -->
     <meta property="og:locale" content="id_ID" />
@@ -24,21 +27,35 @@
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+  <meta property="og:updated_time" content="2025-09-26T00:00:00+00:00" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PT MNI – Program Kerja & Pelatihan ke Jepang" />
     <meta name="twitter:description" content="Pelatihan Kaigo, Magang & SSW. Fokus halal & pendampingan karier berkelanjutan." />
     <meta name="twitter:image" content="https://www.ptmni.co.id/og-cover.jpg" />
+  <meta name="twitter:site" content="@ptmni" />
+  <meta name="twitter:creator" content="@ptmni" />
 
     <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:wght@400;500&display=swap" rel="stylesheet" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <meta name="application-name" content="PT Muhammad Nihon Istiqomah" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="PT MNI" />
+  <meta name="msapplication-TileColor" content="#BC002D" />
+  <link rel="preconnect" href="https://wa.me" />
+  <link rel="dns-prefetch" href="https://wa.me" />
+  <link rel="dns-prefetch" href="https://www.instagram.com" />
 
-    <!-- Structured Data: Organization & FAQ (sesuaikan data nyata) -->
+  <!-- Structured Data: Organization & FAQ (sesuaikan data nyata) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -99,9 +116,34 @@
         ]
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PT Muhammad Nihon Istiqomah",
+        "url": "https://www.ptmni.co.id/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.ptmni.co.id/?q={search_term}",
+          "query-input": "required name=search_term"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://www.ptmni.co.id/"},
+          {"@type": "ListItem", "position": 2, "name": "Program", "item": "https://www.ptmni.co.id/#program"},
+          {"@type": "ListItem", "position": 3, "name": "FAQ", "item": "https://www.ptmni.co.id/#faq"}
+        ]
+      }
+    </script>
   </head>
   <body class="antialiased text-slate-800 bg-white">
     <a href="#hero" class="absolute left-2 top-2 z-50 -translate-y-16 focus:translate-y-0 bg-white border border-slate-300 text-sm px-3 py-2 rounded-md shadow transition">Lewati ke Konten</a>
+    <noscript><div style="background:#BC002D;color:#fff;padding:8px;text-align:center;font-size:14px">Aktifkan JavaScript untuk pengalaman penuh.</div></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
