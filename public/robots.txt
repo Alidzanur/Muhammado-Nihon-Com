@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ptmni.co.id/sitemap.xml
+# Sitemap
+Sitemap: https://ptmni.co.id/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all blog content
+Allow: /blog/
+Allow: /images/
+Allow: /manifest.webmanifest

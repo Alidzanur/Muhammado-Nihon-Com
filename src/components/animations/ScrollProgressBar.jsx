@@ -5,7 +5,7 @@ import { motion, useScroll } from 'framer-motion';
  * ScrollProgressBar
  * Menampilkan progres scroll horizontal di bagian atas halaman.
  */
-export function ScrollProgressBar({ height = 3, color = '#BC002D' }) {
+export function ScrollProgressBar({ height = 4 }) {
   const { scrollYProgress } = useScroll();
   return (
     <motion.div
@@ -13,7 +13,10 @@ export function ScrollProgressBar({ height = 3, color = '#BC002D' }) {
       className="fixed top-0 left-0 right-0 z-[60]"
       aria-hidden="true"
     >
-      <div style={{ height, background: color }} />
+      <div 
+        style={{ height }} 
+        className="bg-gradient-brand shadow-sm"
+      />
     </motion.div>
   );
 }

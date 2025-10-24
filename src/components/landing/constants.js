@@ -1,12 +1,31 @@
-// Konstanta global untuk Landing Page PT MNI
-export const WHATSAPP_NUMBER = "62812XXXXXXX"; // ganti dengan nomor admin tanpa +
-export const DEFAULT_WA_MESSAGE = "Assalamu'alaikum, saya ingin konsultasi program kerja ke Jepang di PT MNI. Mohon informasinya.";
+// Konstanta global untuk Landing Page PT Muhammado Nihon Istiqomah
+export const WHATSAPP_NUMBER = "6285210984579"; // Nomor WhatsApp admin tanpa +
+export const DEFAULT_WA_MESSAGE = "Assalamu'alaikum, saya ingin konsultasi program kerja ke Jepang di PT Muhammado Nihon Istiqomah. Mohon informasinya.";
 export const WA_TEXT = encodeURIComponent(DEFAULT_WA_MESSAGE);
 export const WA_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WA_TEXT}`;
 
-// Logo: untuk produksi ganti ke /logo-mni.png dan letakkan file di public
-export const LOGO_SRC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAD/CAYAAAAquMkCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFxQAAAAXFAAczJb8AAAF+0lEQVR4nO3cS5KkOBQFUZ1vHsg0FAWqJx1j8mXV8xdl6aFAo6dPUmI3w0hUoHh5dZ7bQ3g0pAn6Lx7r8N2aq3Lx8fHh5c9tHj9nJbWq5dX4a3u+0s4cP7ZC0m2vQp4n1vQxU1vA1V3cQpq1b1iY3GkqfY0k/2J0kA9oV3v4V5QbN0+eY3Y5qk1m0qk3m2kE2zvZ3m2t3m3V6m2o0m2Y6m2e0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2Z0m2X0m2bT+v3k2O6lN2lqv3r3jv0d3yq4lM8oW8tYb1Vq2r8H1b2p1k3rWm6m9mcv7c0kO1m6o9mYtqg3m59QjHhYJ8y2G1f0d2Y3u6F3V+2t3a3m3mY7mZ0mXx3f7+oYF6tVvVqP1zWwN8f4yWjK0k9Gg9A7cU+F1y5r7cZB9p+X+0ryZkWQm2c8nPvKZl4dG7H3O1W4p3o8V7a2g7mTg5r4bqvK3zQ7U1mP3m7mVYk5d1YpGm4m8c1p0FQ5sJXx2sC1k9M7s2aA1c7m+X1f0c/3s0lY4z2G+WkG8yQyK8j2o4s1bWJ5k9m4d2G4q2V0o1x1U5C7wW2Y8mP8mX3aWbXW2m1m3m3o+QH1gH3gE3iH2mF3mG2mH3mI2mJ3mK2mL3mM2mN3mO2mP3mQ2mR3mS2mT3mU2mV3mW2mX3mY2mZ3ma2mb3mc2md3me2mf3mg2mh3mi2mj3mk2ml3mm2mn3mo2mp3mq2mr3ms2mt3mu2mv3mw2mx3my2mz3m02m13m22m33m42m53m62m73m82m93nA2nB3nC2nD3nE2nF3nG2nH3nI2nJ3nK2nL3nM2nN3nO2nP3nQ2nR3nS2nT3nU2nV3nW2nX3nY2nZ3na2nb3nc2nd3ne2nf3ng2nh3ni2nj3nk2nl3nm2nn3no2np3nq2nr3ns2nt3nu2nv3nw2nx3ny2nz3oA2oB3oC2oD3oE2oF3oG2oH3oI2oJ3oK2oL3oM2oN3oO2oP3oQ2oR3oS2oT3oU2oV3oW2oX3oY2oZ3oa2ob3oc2od3oe2of3og2oh3oi2oj3ok2ol3om2on3oo2op3oq2or3os2ot3ou2ov3ow2ox3oy2oz3pA==";
+// Logo: menggunakan logo lokal
+export const LOGO_SRC = "/images/Logo-Muhammado.png";
 
-// Util kelas tailwind umum
-export const container = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8";
-export const sectionY = "py-14";
+// Sistem spacing yang konsisten dan profesional
+export const container = "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12";
+export const sectionY = "py-16 sm:py-20 lg:py-24";
+export const sectionYCompact = "py-12 sm:py-16 lg:py-20";
+export const heroY = "py-20 sm:py-24 lg:py-32";
+
+// Spacing utilities
+export const spacing = {
+  section: "py-16 sm:py-20 lg:py-24",
+  sectionCompact: "py-12 sm:py-16 lg:py-20",
+  hero: "py-20 sm:py-24 lg:py-32",
+  container: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12",
+  containerTight: "max-w-6xl mx-auto px-6 sm:px-8 lg:px-12",
+  containerWide: "max-w-8xl mx-auto px-6 sm:px-8 lg:px-12",
+  gap: {
+    xs: "gap-4",
+    sm: "gap-6",
+    md: "gap-8 lg:gap-10",
+    lg: "gap-10 lg:gap-12",
+    xl: "gap-12 lg:gap-16"
+  }
+};

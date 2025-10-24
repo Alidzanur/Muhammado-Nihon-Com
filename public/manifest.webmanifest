@@ -1,13 +1,13 @@
 {
-  "name": "PT Muhammad Nihon Istiqomah",
-  "short_name": "PT MNI",
+  "name": "PT Muhammado Nihon Istiqomah",
+  "short_name": "PT Muhammado Nihon Istiqomah",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#BC002D",
   "description": "LPK ke Jepang: Pelatihan Kaigo, Magang, SSW dengan legalitas jelas & pendampingan halal.",
   "icons": [
-    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/images/Logo-Muhammado.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/Logo-Muhammado.png", "sizes": "512x512", "type": "image/png" }
   ]
 }

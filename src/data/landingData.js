@@ -1,4 +1,4 @@
-// Data terpusat untuk Landing Page PT MNI
+// Data terpusat untuk Landing Page PT Muhammado Nihon Istiqomah
 // Mudah diedit tanpa menyentuh struktur komponen.
 
 export const issuesData = [
@@ -40,7 +40,8 @@ export const uspData = [
 export const programData = [
   {
     key: 'kaigo',
-    title: 'Kaigo (Caregiver) — Unggulan',
+    title: 'Kaigo (Caregiver)',
+    subtitle: 'Unggulan',
     tag: 'Banyak Demand',
     highlight: true,
     icon: 'HeartHandshake',
@@ -57,7 +58,8 @@ export const programData = [
   },
   {
     key: 'magang',
-    title: 'Magang Jepang (Internship)',
+    title: 'Magang Jepang',
+    subtitle: 'Internship',
     icon: 'GraduationCap',
     bullets: [
       'Pelatihan bahasa & teknis dasar sesuai bidang.',
@@ -72,6 +74,7 @@ export const programData = [
   {
     key: 'ssw',
     title: 'SSW (Specified Skilled Worker)',
+    subtitle: 'Pekerja Terampil',
     icon: 'ChefHat',
     bullets: [
       'Persiapan bahasa + materi sesuai sektor (mis. food service/manufacturing).',
@@ -88,11 +91,41 @@ export const programData = [
 export const testimonials = [1,2,3]; // ganti dengan objek real ketika tersedia
 
 export const processSteps = [
-  { key: 'consult', title: 'Konsultasi Awal', icon: 'MessageCircle' },
-  { key: 'train', title: 'Daftar & Pelatihan', icon: 'BookOpen' },
-  { key: 'docs', title: 'Dokumen & Interview', icon: 'Handshake' },
-  { key: 'placement', title: 'Penempatan', icon: 'ShieldCheck' },
-  { key: 'depart', title: 'Keberangkatan', icon: 'PlaneTakeoff' },
+  { 
+    key: 'consult', 
+    title: 'Konsultasi Awal', 
+    description: 'Diskusi kebutuhan, pilihan program, dan penilaian kesiapan calon peserta',
+    duration: '1-2 hari',
+    icon: 'MessageCircle' 
+  },
+  { 
+    key: 'register', 
+    title: 'Daftar & Pelatihan', 
+    description: 'Pendaftaran resmi, pembayaran tahap pertama, dan mulai pelatihan bahasa + keterampilan',
+    duration: '3-8 bulan',
+    icon: 'BookOpen' 
+  },
+  { 
+    key: 'docs', 
+    title: 'Dokumen & Interview', 
+    description: 'Persiapan dokumen lengkap, simulasi interview, dan matching dengan perusahaan Jepang',
+    duration: '1-2 bulan',
+    icon: 'Handshake' 
+  },
+  { 
+    key: 'placement', 
+    title: 'Penempatan Kerja', 
+    description: 'Konfirmasi penempatan kerja, finalisasi kontrak, dan persiapan keberangkatan',
+    duration: '2-4 minggu',
+    icon: 'ShieldCheck' 
+  },
+  { 
+    key: 'depart', 
+    title: 'Keberangkatan', 
+    description: 'Briefing terakhir, escort ke bandara, dan pendampingan hingga tiba di Jepang',
+    duration: '1-2 hari',
+    icon: 'PlaneTakeoff' 
+  },
 ];
 
 export const faqData = [

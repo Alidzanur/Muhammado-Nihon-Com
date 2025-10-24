@@ -3,8 +3,9 @@ import { CheckCircle2 } from 'lucide-react';
 
 export function KBadge({ children }) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm text-[#2D3748] border-[#E2E8F0] bg-white">
-      <CheckCircle2 className="w-4 h-4 text-[#BC002D]" /> {children}
+    <span className="inline-flex items-center gap-2 rounded-full border-2 border-brand-200 px-4 py-2 text-ui-base text-slate-700 bg-gradient-brand-soft backdrop-blur-sm shadow-sm hover:shadow-brand hover:border-brand-300 transition-all duration-200">
+      <CheckCircle2 className="w-4 h-4 text-brand-600" /> 
+      <span className="font-medium">{children}</span>
     </span>
   );
 }

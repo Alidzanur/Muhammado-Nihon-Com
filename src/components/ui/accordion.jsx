@@ -116,7 +116,7 @@ export function AccordionContent({ children, className = '' }) {
       id={contentId}
       role="region"
       aria-hidden={!open}
-      className={clsx('px-0 text-sm text-slate-600', className)}
+      className={clsx('px-0 body-card text-slate-600', className)}
     >
       <div
         ref={wrapperRef}
